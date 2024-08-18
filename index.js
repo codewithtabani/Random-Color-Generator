@@ -90,6 +90,10 @@
 // document.body.firstElementChild.children[4].style.backgroundColor = randomBackgroundColor
 // document.body.firstElementChild.children[4].style.color = randomColor
 
+
+
+
+
 function RandomColor() {
     let red =  Math.ceil( Math.random() * 255 )
     let green = Math.ceil( Math.random() * 255 )
@@ -97,14 +101,28 @@ function RandomColor() {
     return `rgb(${red} , ${green} , ${blue})`
 }
 let bt1 = document.querySelector('.b')
+
+const nodeList = document.querySelectorAll(".box1")
+    for (let i = 0; i < nodeList.length; i++) {
+     nodeList[i].style.backgroundColor = RandomColor()
+     nodeList[i].style.color = RandomColor()}
+
 bt1.addEventListener("click" ,()=>{
-    const nodeList = document.querySelectorAll(".box")
+    const nodeList = document.querySelectorAll(".box2")
     for (let i = 0; i < nodeList.length; i++) {
      nodeList[i].style.backgroundColor = RandomColor()
      nodeList[i].style.color = RandomColor()
     }
 })
 
+setInterval(() => {
+    const nodeList = document.querySelectorAll(".box3")
+    for (let i = 0; i < nodeList.length; i++) {
+     nodeList[i].style.backgroundColor = RandomColor()
+     nodeList[i].style.color = RandomColor()
+    }
+
+}, 1000);
 
 
 
