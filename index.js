@@ -124,6 +124,15 @@ setInterval(() => {
 
 }, 1000);
 
+setTimeout(() => {
+    const nodeList = document.querySelectorAll(".box4")
+    for (let i = 0; i < nodeList.length; i++) {
+     nodeList[i].style.backgroundColor = RandomColor()
+     nodeList[i].style.color = RandomColor()
+    }
+
+}, 1000);
+
 
 
 
